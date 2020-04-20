@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="1" parallel="tests" thread-count="1">
+	<test name="API_Automation_Demo">
+		<classes>
+			<class name="com.ALL_APIs.testScript.All_apps_APIs"/>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="API_Automation_Demo(failed)">
+    <classes>
+      <class name="com.ALL_APIs.testScript.All_apps_APIs">
+        <methods>
+          <include name="RVA_API_Test"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.ALL_APIs.testScript.All_apps_APIs -->
+    </classes>
+  </test> <!-- API_Automation_Demo(failed) -->
+</suite> <!-- Failed suite [Suite] -->
