@@ -2,20 +2,20 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-04-17T13:46:37Z" name="Suite" finished-at="2020-04-17T13:46:43Z" duration-ms="5886">
+  <suite started-at="2020-04-22T07:29:44Z" name="Suite" finished-at="2020-04-22T07:29:55Z" duration-ms="11670">
     <groups>
     </groups>
-    <test started-at="2020-04-17T13:46:37Z" name="API_Automation_Demo" finished-at="2020-04-17T13:46:43Z" duration-ms="5886">
+    <test started-at="2020-04-22T07:29:44Z" name="API_Automation_Demo" finished-at="2020-04-22T07:29:55Z" duration-ms="11670">
       <class name="com.ALL_APIs.testScript.All_apps_APIs">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-17T19:16:37Z" name="beforeSuite" finished-at="2020-04-17T19:16:37Z" duration-ms="212" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-22T12:59:43Z" name="beforeSuite" finished-at="2020-04-22T12:59:44Z" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method signature="RVA_API_Test()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-17T19:16:37Z" name="RVA_API_Test" finished-at="2020-04-17T19:16:43Z" duration-ms="5875" status="PASS">
+        <test-method signature="API_Test()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-22T12:59:44Z" name="API_Test" finished-at="2020-04-22T12:59:55Z" duration-ms="11660" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- RVA_API_Test -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-17T19:16:43Z" name="afterSuite" finished-at="2020-04-17T19:16:43Z" duration-ms="1" status="PASS">
+        </test-method> <!-- API_Test -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.ALL_APIs.testScript.All_apps_APIs@7f9fcf7f]" started-at="2020-04-22T12:59:55Z" name="afterSuite" finished-at="2020-04-22T12:59:55Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

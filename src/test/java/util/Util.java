@@ -196,10 +196,10 @@ public class Util {
 
 	
 
-	public static void hitDELETEapiAM(String URI) {
-		RestAssured.baseURI = prop.getProperty("baseURI_QAenv");
+	public static void hitDELETEapi(String URI) {
+		RestAssured.baseURI = URI;
 
-		response = given().auth().oauth2(TokenValue).contentType(ContentType.JSON).delete(URI);
+		response = given().contentType(ContentType.JSON).delete(URI);
 		jsonPathEvaluator = response.jsonPath();
 		rescode = response.getStatusCode();
 		responsebody = response.getBody().asString();
@@ -211,5 +211,43 @@ public class Util {
 		static final File Login_creds = new File("./JsonFiles/Login_creds.json");
 		static final File PUT_User_DATA = new File("./JsonFiles/PutUserData.json");
 			}
+	
+	public static void hitAPIwithAccessToken(String URI, String TokenValue) {
+		RestAssured.baseURI = URI;
+		response = RestAssured.given().auth().oauth2(TokenValue).get(URI);
+		jsonPathEvaluator = response.jsonPath();
+		rescode = response.getStatusCode();
+		responsebody = response.getBody().asString();
+	}
+public static void GetActiveToken() throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
+	    driver = new ChromeDriver(chromeOptions);
+		driver.get("enter URL here");
+		String title = driver.getTitle();
+		Thread.sleep(3000);
+		//add sign IN if Required
+		if (title.equals("Sign in to your account")) {
+			driver.findElement(By.xpath("//input[@type=\"email\"]")).sendKeys("email");
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//input[@value=\"Next\"]")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//input[@type=\"password\"]")).sendKeys("password");
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//input[@value=\"Sign in\"]")).click();
+			Thread.sleep(3000);
+			driver.findElement(By.xpath("//input[@value=\"Yes\"]")).click();
+			Thread.sleep(5000);
+		}
+
+		TokenValue = (String) ((JavascriptExecutor) driver)
+				.executeScript("return window.sessionStorage.getItem(\"token\");");
+
+		driver.close();
+		driver.quit();
+	}
+
+
 
 	}

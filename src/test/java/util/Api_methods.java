@@ -133,5 +133,26 @@ public class Api_methods extends Util {
 		System.out.println("Execution done");
 	}
 
-	
+		public static void DeleteUsers(int row)
+				throws WriteException, Exception {
+
+			flag = false;
+			
+			System.out.println("started Executing");
+
+			hitDELETEapi("https://petstore.swagger.io/v2/user/user1");
+				if(rescode==404) { flag=true;}
+				else {flag=false;}
+				
+			
+			if (flag == true) {
+				writeStatus(7, row, "PASSED");
+				writeStatus(8, row, responsebody);
+				
+			} else {
+				writeStatus(7, row, "FAILED");
+				writeStatus(8, row, responsebody);
+			}
+			System.out.println("Execution done");
+		}
 }

@@ -75,8 +75,12 @@ public class All_apps_APIs extends Util {
 						Api_methods.PutUserData(row);
 						break;
 
-					
-					
+					case "DELETE" + "https://petstore.swagger.io/v2/user/user1": 
+						System.out.println(method + URI);
+
+						Api_methods.DeleteUsers(row);
+						break;
+						
 					
 					}	
 					
